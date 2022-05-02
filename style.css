@@ -10,7 +10,6 @@ html, body {
   color: white;
   text-align: center;
 }
-
 canvas {
     display: block;
     margin-left: auto;
@@ -28,4 +27,13 @@ canvas {
   bottom: 0;
   top: 0;
 
+}
+
+p {
+  font-family: cursive;
+  font-size: 1vw;
+  font-style: italic;
+  font-weight: 100vh;
+  text-align: center;
+  color: white;
 }
