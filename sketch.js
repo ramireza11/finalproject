@@ -1,5 +1,7 @@
 let eyesImg;
-
+let eyes1Img;
+let eyes2Img;
+let eyes3Img;
 
 function setup() {
   createCanvas(600, 600);
@@ -12,6 +14,9 @@ function setup() {
 
 function preload(){
   eyesImg = loadImage('assets/eyefinal.png');
+  eyes1Img = loadImage('assets/eyefinal1.1.png');
+  eyes2Img = loadImage('assets/eyefinal1.2.png');
+  eyes3Img = loadImage('assets/eyefinal1.3.png');
 }
 
 function draw() {
@@ -32,6 +37,8 @@ function draw() {
     pop();
 
   }
-  image(eyesImg, -130, -80 ,280 , 200);
-
+  image(eyesImg, -130, -300 ,280 , 200);
+  image(eyes3Img, -130, 100 ,280 , 200);
+  image(eyes2Img, 120, -125, 200, 250);
+  image(eyes1Img, -270,-125, 180, 250)
 }
