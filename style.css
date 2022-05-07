@@ -3,8 +3,8 @@ html, body {
   padding: 0;
   background-color: black;
 
-  height:100vh;
-  font-size: 12vw;
+  height: inherit;
+  font-size: 8vw;
   text-transform: uppercase;
   overflow: hidden;
   color: white;
@@ -31,7 +31,7 @@ canvas {
 
 p {
   font-family: cursive;
-  font-size: 1vw;
+  font-size: 1.5vw;
   font-style: italic;
   font-weight: 100vh;
   text-align: center;
