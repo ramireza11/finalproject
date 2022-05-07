@@ -3,14 +3,8 @@ let eyes1Img;
 let eyes2Img;
 let eyes3Img;
 
-function setup() {
-  createCanvas(600, 600);
-
-  angleMode(DEGREES);
-  rectMode(CENTER);
-
-
-}
+let state = 'menu';
+let cnv;
 
 function preload(){
   eyesImg = loadImage('assets/eyefinal.png');
@@ -19,7 +13,51 @@ function preload(){
   eyes3Img = loadImage('assets/eyefinal1.3.png');
 }
 
-function draw() {
+function setup() {
+  cnv = createCanvas(600, 600);
+  cnv.mouseClicked(function(){
+    console.log('canvas clicked');
+    state = 'page 1'
+  });
+  angleMode(DEGREES);
+  rectMode(CENTER);
+}
+
+
+function draw(){
+
+  switch (state){
+    case 'menu':
+     menu();
+     cnv.mouseClicked(menuMouseClicked);
+     break;
+    case 'page 1':
+     page1();
+     cnv.mouseClicked(page1MouseClicked);
+     break;
+    default:
+     break;
+  }
+}
+
+
+
+function menu(){
+  background(123,123,423);
+  text('click anywhere to meet an illusion', 250, 250);
+}
+
+
+
+function menuMouseClicked(){
+    console.log('canvas clicked on menu');
+    state = 'page 1'
+}
+
+
+
+function page1(){
+  background(123,123,423);
   background(10, 20, 30);
 
   noFill();
@@ -35,10 +73,16 @@ function draw() {
     rect(0, 0, 800 - i * 4, 800 - i *4, 200 - i);
 
     pop();
-
   }
+
   image(eyesImg, -130, -300 ,280 , 200);
   image(eyes3Img, -130, 100 ,280 , 200);
   image(eyes2Img, 120, -125, 200, 250);
-  image(eyes1Img, -270,-125, 180, 250)
+  image(eyes1Img, -270,-125, 200, 250)
+}
+
+
+
+function page1MouseClicked(){
+  console.log('canvas clicked on page 1');
 }
