@@ -7,13 +7,6 @@ let state = 'menu';
 let cnv;
 let angle = 0;
 
-function preload(){
-  eyesImg = loadImage('assets/eyefinal.png');
-  eyes1Img = loadImage('assets/eyefinal1.1.png');
-  eyes2Img = loadImage('assets/eyefinal1.2.png');
-  eyes3Img = loadImage('assets/eyefinal1.3.png');
-}
-
 function setup() {
   cnv = createCanvas(600, 600);
   cnv.mouseClicked(function(){
@@ -76,7 +69,7 @@ function page1(){
   noFill();
   stroke(255);
 
-  translate(270, 300);
+  translate(300, 300);
 
   for (var i = 0; i < 200; i++) {
     push();
@@ -87,14 +80,7 @@ function page1(){
 
     pop();
   }
-
-  image(eyesImg, -130, -300 ,280 , 200);
-  image(eyes3Img, -130, 100 ,280 , 200);
-  image(eyes2Img, 120, -125, 200, 250);
-  image(eyes1Img, -270,-125, 200, 250)
 }
-
-
 
 function page1MouseClicked(){
   console.log('canvas clicked on page 1');
