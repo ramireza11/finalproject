@@ -49,8 +49,29 @@ function draw(){
 
 
 function menu(){
-  background(123,123,423);
-  text('click anywhere to meet an illusion', 250, 250);
+  background(20);
+  fill(255);
+  textSize(40);
+  textFont('monospace', 30);
+  text('Can You Get passed an Illusion?', 25, 140);
+  textSize(20);
+  textFont('serif', 20);
+  text('I do not take any responsiblity', 10, 500);
+  textSize(20);
+  textFont('serif', 20);
+  text('if you get hurt or seriously injuried', 10, 530);
+  textFont('monospace', 30);
+  text('Can You Get passed an Illusion', 25, 150);
+  textSize(40);
+  textFont('monospace', 30);
+  text('Can You Get passed an Illusion?', 25, 160);
+  textSize(40);
+  textFont('monospace', 30);
+  text('Can You Get passed an Illusion?', 25, 170);
+  textSize(40);
+  textFont('sans-serif', 20);
+  text('Click Anywhere In the Screen to Continue to each illusion', 45, 320);
+
 }
 
 
@@ -151,8 +172,21 @@ function page3MouseClicked(){
 
 
 function end(){
-  background(123,123,423);
-  text('fin', 250, 250);
+  background(20);
+  fill(255);
+  textFont('sans-serif', 30);
+  text('Congrats On Completing', 140, 150);
+  textFont('monospace', 20);
+  text('Click On Screen To Go Back To The Main Menu', 50, 450);
+  textFont('serif', 40);
+  text('You Have Now Passed This Illusion', 10, 270);
+  textFont('serif', 40);
+  text('You Have Now Passed This Illusion', 10, 290);
+  textFont('serif', 40);
+  text('You Have Now Passed This Illusion', 10, 310);
+  textFont('serif', 40);
+  text('You Have Now Passed This Illusion', 10, 330);
+
 }
 
 
