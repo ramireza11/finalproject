@@ -14,7 +14,6 @@ function setup() {
   angleMode(DEGREES);
   rectMode(CENTER);
   song = loadSound("assets/white noise.mp3", loaded);
-  song.setVolume(0.05);
 }
 
 
@@ -25,13 +24,17 @@ function loaded(){
 
 function draw(){
 
-  song.setVolume(0.05);
+  song.setVolume(0.07);
 
   switch (state){
     case 'menu':
      menu();
      cnv.mouseClicked(menuMouseClicked);
      break;
+    case 'directions':
+      directions();
+      cnv.mouseClicked(directionsMouseClicked);
+      break;
     case 'page 1':
      page1();
      cnv.mouseClicked(page1MouseClicked);
@@ -83,9 +86,39 @@ function menu(){
 
 function menuMouseClicked(){
     console.log('canvas clicked on menu');
-    state = 'page 1'
+    state = 'directions'
 }
 
+function directions(){
+  background(20);
+  fill(255);
+  textSize(40);
+  textFont('monospace', 30);
+  text('Directions', 25, 30);
+  textSize(20);
+  textFont('serif', 20);
+  text('I do not take any responsiblity', 10, 500);
+  textSize(20);
+  textFont('serif', 20);
+  text('if you get hurt or seriously injuried', 10, 530);
+  textSize(18);
+  textFont('monospace',);
+  text('take 30 seconds looking in the middle', 25, 200);
+  textSize(18);
+  textFont('monospace',);
+  text('Afterwards look around your room', 25, 250);
+  textSize(18);
+  textFont('monospace',);
+  text('Take a break before contuining to the next illusion', 25, 300);
+  textSize(18);
+  textFont('monospace',);
+  text('Repeat', 25, 350);
+}
+
+function directionsMouseClicked(){
+  console.log('canvas clicked on page 1');
+  state = 'page 1'
+}
 
 function page1(){
   background(123,123,423);
