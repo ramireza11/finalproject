@@ -5,23 +5,27 @@ let angle = 0;
 var song;
 
 
-function preload(){
-  song = loadSound("white noise.mp3");
-}
-
 function setup() {
   cnv = createCanvas(600, 600);
   cnv.mouseClicked(function(){
-    song.play();
     console.log('canvas clicked');
     state = 'page 1'
   });
   angleMode(DEGREES);
   rectMode(CENTER);
+  song = loadSound("assets/white noise.mp3", loaded);
+  song.setVolume(0.05);
+}
+
+
+function loaded(){
+  song.play();
 }
 
 
 function draw(){
+
+  song.setVolume(0.05);
 
   switch (state){
     case 'menu':
