@@ -1,15 +1,18 @@
-let eyesImg;
-let eyes1Img;
-let eyes2Img;
-let eyes3Img;
 
 let state = 'menu';
 let cnv;
 let angle = 0;
+var song;
+
+
+function preload(){
+  song = loadSound("white noise.mp3");
+}
 
 function setup() {
   cnv = createCanvas(600, 600);
   cnv.mouseClicked(function(){
+    song.play();
     console.log('canvas clicked');
     state = 'page 1'
   });
@@ -47,7 +50,6 @@ function draw(){
 }
 
 
-
 function menu(){
   background(20);
   fill(255);
@@ -75,12 +77,10 @@ function menu(){
 }
 
 
-
 function menuMouseClicked(){
     console.log('canvas clicked on menu');
     state = 'page 1'
 }
-
 
 
 function page1(){
@@ -103,12 +103,11 @@ function page1(){
   }
 }
 
+
 function page1MouseClicked(){
   console.log('canvas clicked on page 1');
   state = 'page 2'
 }
-
-
 
 
 function page2(){
@@ -131,12 +130,10 @@ function page2(){
 }
 
 
-
 function page2MouseClicked(){
     console.log('canvas clicked on menu');
     state = 'page 3'
 }
-
 
 
 function page3(){
@@ -163,12 +160,10 @@ function page3(){
 }
 
 
-
 function page3MouseClicked(){
     console.log('canvas clicked on menu');
     state = 'end'
 }
-
 
 
 function end(){
@@ -188,7 +183,6 @@ function end(){
   text('You Have Now Passed This Illusion', 10, 330);
 
 }
-
 
 
 function endMouseClicked(){
