@@ -81,6 +81,13 @@ function menu(){
   textFont('sans-serif', 20);
   text('Click Anywhere In the Screen to Continue to each illusion', 45, 320);
 
+  textSize(20);
+  textFont('serif', 20);
+  text('Top Left is For', 400, 500);
+  textSize(20);
+  textFont('serif', 20);
+  text('music and timer', 450, 530);
+
 }
 
 
@@ -113,6 +120,13 @@ function directions(){
   textSize(18);
   textFont('monospace',);
   text('Repeat', 25, 350);
+
+  textSize(20);
+  textFont('serif', 20);
+  text('Top Left is For', 400, 500);
+  textSize(20);
+  textFont('serif', 20);
+  text('music and timer', 450, 530);
 }
 
 function directionsMouseClicked(){
