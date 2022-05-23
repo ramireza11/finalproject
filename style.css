@@ -1,6 +1,6 @@
 html, body {
-  margin: 0;
-  padding: 0;
+  margin: auto;
+  padding: auto;
   background-color: black;
 
   height: inherit;
@@ -27,13 +27,4 @@ canvas {
   bottom: 0;
   top: 0;
 
-}
-
-p {
-  font-family: cursive;
-  font-size: 1.5vw;
-  font-style: italic;
-  font-weight: 100vh;
-  text-align: center;
-  color: white;
 }

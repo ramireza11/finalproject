@@ -24,7 +24,7 @@ function loaded(){
 
 function draw(){
 
-  song.setVolume(0.07);
+  song.setVolume(0.10);
 
   switch (state){
     case 'menu':
